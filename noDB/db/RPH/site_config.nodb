@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<database>
+  <column>id</column>
+  <column>keyname</column>
+  <column>value</column>
+  <column>description</column>
+  <column>created</column>
+  <column>modified</column>
+  <row>
+    <id>1</id>
+    <keyname>LOG_LEVEL</keyname>
+    <value>7</value>
+    <description>Site Logging Level (1-7), Production default should be 6 (Info)</description>
+    <created>2013-07-20 10:00:00</created>
+    <modified>2013-07-20 10:00:00</modified>
+  </row>
+  <row>
+    <id>3</id>
+    <keyname>SMTP_PORT</keyname>
+    <value>25</value>
+    <description>SMTP port settings</description>
+    <created>2013-07-20 10:00:00</created>
+    <modified>2013-07-20 10:00:00</modified>
+  </row>
+  <row>
+    <id>4</id>
+    <keyname>FEEDBACK_EMAIL</keyname>
+    <value>cynicrock@hotmail.com</value>
+    <description>Emails that receive the feedback email spam</description>
+    <created>2013-07-20 10:00:00</created>
+    <modified>2013-07-20 10:00:00</modified>
+  </row>
+  <row>
+    <id>2</id>
+    <keyname>SMTP_SERVER</keyname>
+    <value>mail.health.wa.gov.au;mail.iinet.net.au</value>
+    <description>SMTP server settings (';' separated for backup servers</description>
+    <created>2013-07-20 10:00:00</created>
+    <modified>2013-07-20 10:00:00</modified>
+  </row>
+  <row>
+    <id>5</id>
+    <keyname>CACHE_EXPIRY_DEPT</keyname>
+    <value>600</value>
+    <description>JSON Caching for Departments: (integer value in seconds, 0 means do not cache)</description>
+    <created>2013-07-20 10:00:00</created>
+    <modified>2013-07-20 10:00:00</modified>
+  </row>
+  <row>
+    <id>6</id>
+    <keyname>CACHE_EXPIRY_SITENAV</keyname>
+    <value>600</value>
+    <description>JSON Caching for SiteNav: (integer value in seconds, 0 means do not cache)</description>
+    <created>2013-07-20 10:00:00</created>
+    <modified>2013-07-20 10:00:00</modified>
+  </row>
+  <row>
+    <id>7</id>
+    <keyname>CACHE_EXPIRY_RPMDATA</keyname>
+    <value>0</value>
+    <description>JSON Caching for RPM Statistics</description>
+    <created>2013-07-20 10:00:00</created>
+    <modified>2013-07-20 10:00:00</modified>
+  </row>
+</database>

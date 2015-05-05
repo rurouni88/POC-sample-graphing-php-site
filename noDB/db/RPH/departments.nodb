@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<database>
+  <column>id</column>
+  <column>name</column>
+  <column>display</column>
+  <column>created</column>
+  <column>modified</column>
+  <row>
+    <id>1</id>
+    <name>cardiology</name>
+    <display>Cardiology</display>
+    <created>2013-07-10 00:00:00</created>
+    <modified>2013-07-10 00:00:00</modified>
+  </row>
+  <row>
+    <id>2</id>
+    <name>radiology</name>
+    <display>Radiology</display>
+    <created>2013-07-10 00:00:00</created>
+    <modified>2013-07-10 00:00:00</modified>
+  </row>
+  <row>
+    <id>3</id>
+    <name>medical_physics</name>
+    <display>Medical Physics</display>
+    <created>2013-07-10 00:00:00</created>
+    <modified>2013-07-10 00:00:00</modified>
+  </row>
+</database>

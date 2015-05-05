@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<database>
+  <column>id</column>
+  <column>display</column>
+  <column>path</column>
+  <column>order</column>
+  <column>description</column>
+  <column>created</column>
+  <column>modified</column>
+  <row>
+    <id>1</id>
+    <display>Home</display>
+    <path>index.php</path>
+    <order>1</order>
+    <description>Site Home Page. The default index.php page</description>
+    <created>2013-07-10 00:00:00</created>
+    <modified>2013-07-14 00:00:00</modified>
+  </row>
+  <row>
+    <id>6</id>
+    <display>Data Entry</display>
+    <path>index.php?mode=form</path>
+    <order>2</order>
+    <description>Data Entry Page. Where you can input data about the numbers of Personal Radiation Monitors (PRMs) that are returned to the Hospital by departments for processing each month</description>
+    <created>2013-07-14 00:00:00</created>
+    <modified>2013-07-14 00:00:00</modified>
+  </row>
+  <row>
+    <id>2</id>
+    <display>Calculations</display>
+    <path>index.php?mode=calculations</path>
+    <order>3</order>
+    <description>Some calculations and statistics regarding Personal Radiation Monitors (PRMs) returns.</description>
+    <created>2013-07-10 00:00:00</created>
+    <modified>2013-07-14 00:00:00</modified>
+  </row>
+  <row>
+    <id>3</id>
+    <display>Graph</display>
+    <path>index.php?mode=graph</path>
+    <order>4</order>
+    <description>Some graphs and charts regarding Personal Radiation Monitors (PRMs) returns.</description>
+    <created>2013-07-10 00:00:00</created>
+    <modified>2013-07-14 00:00:00</modified>
+  </row>
+  <row>
+    <id>4</id>
+    <display>Feedback</display>
+    <path>index.php?mode=feedback</path>
+    <order>5</order>
+    <description>Submit any feedback, complaints, proposals here.</description>
+    <created>2013-07-10 00:00:00</created>
+    <modified>2013-07-14 00:00:00</modified>
+  </row>
+  <row>
+    <id>5</id>
+    <display>About</display>
+    <path>index.php?mode=about</path>
+    <order>6</order>
+    <description>Information about this site</description>
+    <created>2013-07-10 00:00:00</created>
+    <modified>2013-07-14 00:00:00</modified>
+  </row>
+</database>

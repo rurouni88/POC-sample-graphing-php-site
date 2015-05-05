@@ -1,0 +1,6 @@
+<phpunit
+	bootstrap="../functions.php"
+	strict="false"
+	verbose="true"
+>
+</phpunit>

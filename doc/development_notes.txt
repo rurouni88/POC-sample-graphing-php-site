@@ -1,0 +1,113 @@
+Web site design task
+You are asked to create a web site that enables users to enter data about the numbers of Personal Radiation Monitors (PRMs) that are returned to the Hospital by departments for processing.
+Your web site should include at least the following pages:
+- A Home page providing access to the other pages.
+- A Data Entry page where users enter the numbers of returned PRMs for each month and department.
+
+You should allow for up to 12 months data to be entered. Currently three departments (Cardiology, Radiology and Medical Physics) are being monitored, but this is expected to increase in the future; the design should allow for an increase in departments without the need for any recoding.
+- A Calculations page that calculates and displays various statistics that you think relevant to the data.
+Users are unsure what statistics they require and leave it in the hands of the programmer to decide.
+- A Graphs page that presents the data in graphical form. Users are unsure what type of graph they
+require and leave it in the hands of the programmer to decide.
+- A Feedback page that emails comments to robert.pezzarini@health.wa.gov.au
+
+Design notes.
+-  The site should be completely self-contained.
+- You will be given ftp access to the web server to upload your site. The web site name is mc6420 and you will be allocated a page named your surname. For example, Robert Pezzarini will be allocated the page "http://mc6420/pezzarini/".
+- The Hospital has a mail server named mail.health.wa.gov.au that allows anonymous smtp access.
+- The web server is a Windows 2003 Server R2 running IIS V6.
+- Available technologies on the web server are VBScript and PHP V5.3.8.
+- Users have Windows XP PC's running Internet Explorer 8 with Microsoft Office 2003 Professional
+installed.
+
+Environment:
+- Windows 2003 Server R2 running IIS V6
+
+Primary Language:
+- PHP V5.3.8
+- Let's not touch VBScript with a 10 foot pole. PHP is more platform independent.
+- VBScript is not. This will allow migration of webservers to ahem...Linux which is FOSS :)
+- Having dependency on VBScript will not allow that :P
+- Use of a PHP Framework has been considered, but as this will be a standalone/self-contained, and frameworks are a dependency and require installation and configuration, let's pump everything out from scratch.
+
+Datastore:
+- Initially considered using 
+	Using SplFileObject class (PHP 5 >= 5.1.0) to write JSON files or CSV files.
+	If I can install MySQL or MariaDB on the server, then better.
+	Assume that no DB is available on Phase 1 implementation.
+	Primary reason is that JSON is lightweight and natively parsed by Javascript/JQuery (front end).
+	However, to facilitate an approach which allow migration to a DB, chose to use noDB classes
+
+Caching:
+- Cache data to prevent server overload on recalculation. Although this is a proof-of-concept, these things must be considered in any software design.
+
+Archival Strategy:
+- Have a crontab or scheduler to cat all files to a single file in an archive folder YYYY/MM/HHMMSS.json, but it's Windows...no crontab :P
+
+Javascript:
+- JQuery = less risk on cross browser compatibility issues
+
+Graphing:
+- Highcharts (jQuery Visualize Plugin, and GraphUp have compatibility issues with IE6)
+
+Development will occur on:
+- XAMPP Lite USB stick on various Windows platforms
+- Ubuntu 12.04 box
+- LUbuntu 13.04 box
+
+IDE:
+- Geany Portable for Windows
+- Geany for Linux
+
+Development Music:
+- David Guetta, Nothing But the Beat
+
+Log:
+[2013-07-10] - Building the core
+- Set up php templates, .htaccess file
+- Set up core CSS
+- Create global functions.php file, includes directory and autoloading of classes
+- Imported noDB
+- Wrote DAO class which wraps about noDB
+- Made tables site_nav, rpm_data, departments
+- Wrote DAO classes for above tables
+
+[2013-07-11] - Prototyping the deliverables
+- Made API function library
+- Made Process library
+- Made form for submission of data
+- Override form submission events by using AJAX
+
+[2013-07-15] - Refinement, Enforcing abstraction
+- Created Process, DAO and API namespaces
+- Deprecated Process library and moved all to Process Namespace
+- Move DAO classes into DAO namespace
+- Imported PHPMailer
+- Constructed feedback form and test using iinet SMTP as backup server
+- Imported KLogger and integrated into API Base class
+- Move API lib functions which involve posted data into API namespace, so logging is inherited
+
+[2013-07-17] - Reviewing and Statistics
+- Realized that it's PRM and not RPM, so did a mass renaming of classes and variables
+- Build Statistics class and PRM Statistics class
+- Build front end to access statistics
+- Build PieChart using HighCharts
+- Stuck in some CSS and images for the Message Boxes
+
+[2013-07-18] - Adding more nice to haves
+- Built Caching class
+- Convert all APIs for retrieving statistics to use CacheJSON Object
+- Set an expiry for JSON cache in Site Config
+- Added a bit more css to make class look nicer
+- Added Unit Testing for DAO
+- Front-end testing, by reinjecting all the data
+
+Installation (Windows):
+- remove and create log and cache files
+
+Installation (Linux):
+rmdir log;
+rmdir cache;
+mkdir log;
+mkdir cache;
+chmod 777

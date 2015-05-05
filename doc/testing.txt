@@ -1,0 +1,15 @@
+// Installing PHP UnitTest
+cd \servers\xampp\xampplite\php
+pear clear-cache 
+pear update-channels
+pear upgrade --alldeps -f 
+pear channel-discover pear.phpunit.de
+pear channel-discover pear.symfony-project.com
+pear channel-discover components.ez.no
+pear config-set preferred_state beta
+pear install --onlyreqdeps phpunit/PHPUnit
+
+// Testing
+E:\
+cd servers\xampp\xampplite\htdocs\rph-site\includes\t
+E:\servers\xampp\xampplite\php\phpunit -c phpunit_config.xml .

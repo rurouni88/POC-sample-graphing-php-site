@@ -1,25 +1,6 @@
 <div id="about">
 <h3>About</h3>
 <p>
-	<strong>Position: 602478</strong> - Senior Information Systems Development Officer<br />
-	<strong>Workplace:</strong> Royal Perth Hospital<br />
-	<strong>Subject:</strong> Interview requirements
-</p>
-
-<p>
-Prior to attending the interview, we ask that you create a simple web site to the specifications given below
-and bring it with you to the interview. The actual interview process should take about 1 hour and 15 minutes
-consisting of:
-<ul>
-	<li>10 minutes to upload your sample web site to our web server.</li>
-	<li>20 minutes to provide written answers to a set of questions provided on the day of the interview.</li>
-	<li>45 minutes to be interviewed by the selection panel. As part of the interview process you will be
-asked to demonstrate the operation of your sample website and discuss the design decisions and
-techniques used in its design.</li>
-</ul>
-</p>
-
-<p>
 <p><strong>Web site design task</strong></p>
 You are asked to create a web site that enables users to enter data about the numbers of Personal Radiation
 Monitors (PRMs) that are returned to the Hospital by departments for processing.
